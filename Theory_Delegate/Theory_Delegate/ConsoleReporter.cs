@@ -11,6 +11,7 @@ namespace Theory_Delegate
         public void SendMessage(string message)
         {
             Console.WriteLine(message);
+
         }
     }
 }
