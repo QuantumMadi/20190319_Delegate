@@ -11,7 +11,6 @@ namespace Theory_Delegate
         static void Main(string[] args)
         {
             
-
             var account = new BankAccount
             {
                 FullName = "Petrovich"
@@ -20,7 +19,14 @@ namespace Theory_Delegate
             var reporter = new ConsoleReporter();
             account.ReportEvent  += reporter.SendMessage;
             account.ReportEvent += BlahBlah;
-            
+
+            //анонимный метод
+            account.ReportEvent += delegate (string text) {
+                /*
+                 * какое-то тело
+                 */
+                return; };
+
             account.AddSum(1000);
             account.WithdrowSum(100);
 
