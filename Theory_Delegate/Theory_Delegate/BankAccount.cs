@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Theory_Delegate
 {
-    public delegate void SendMessageDelagate(string message);
-
-   
+    public delegate void SendMessageDelagate(string message);  
     public class BankAccount
     {
         private SendMessageDelagate reporter;
