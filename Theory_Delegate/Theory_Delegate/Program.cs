@@ -17,12 +17,19 @@ namespace Theory_Delegate
                 FullName = "Petrovich"
             };
 
-            account.RegisterReporter(new SendMessageDelagate(
-                new ConsoleReporter().SendMessage));
+            var reporter = new ConsoleReporter();
+            account.ReportEvent  += reporter.SendMessage;
+            account.ReportEvent += BlahBlah;
             
             account.AddSum(1000);
             account.WithdrowSum(100);
+
             Console.ReadLine();
+        }
+
+        private static void BlahBlah(string message)
+        {
+            throw new NotImplementedException();
         }
     }
 }

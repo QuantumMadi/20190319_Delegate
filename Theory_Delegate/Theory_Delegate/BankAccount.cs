@@ -9,24 +9,16 @@ namespace Theory_Delegate
     public delegate void SendMessageDelagate(string message);  
     public class BankAccount
     {
-        private SendMessageDelagate reporter;
+        public event SendMessageDelagate ReportEvent;
 
         public string FullName { get; set; }
         public int Sum { get; private set; } = 0;
-
-        public void RegisterReporter(SendMessageDelagate sendMessageDelagate)
-        {
-            reporter += sendMessageDelagate;
-        }
-        public void UnRegisterDelegate(SendMessageDelagate sendMessageDelagate)
-        {
-            reporter -= sendMessageDelagate;            
-        }
+     
 
         public void AddSum(int sum)
         {          
             Sum += sum;
-            reporter?.Invoke($"Vam nachisleno {sum}");
+            ReportEvent?.Invoke($"Vam nachisleno {sum}");
         }
 
         public int WithdrowSum(int sum)
@@ -34,10 +26,10 @@ namespace Theory_Delegate
             if (sum <= Sum)
             {
                 Sum -= sum;
-                reporter?.Invoke($"U vas snyato {sum}");
+                ReportEvent?.Invoke($"U vas snyato {sum}");
                 return sum;
             }
-            reporter?.Invoke($"Malo babla {sum}");
+            ReportEvent?.Invoke($"Malo babla {sum}");
             return -1;
         }
 
