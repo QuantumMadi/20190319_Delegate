@@ -1,15 +1,14 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
+using Newtonsoft.Json;
+using StarWars.Models.InnerServices;
 
-namespace StarWars
+namespace StarWars.Models
 {
     [Serializable]
     public class Person
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Height { get; set; }
         public string Mass { get; set; }
@@ -29,5 +28,5 @@ namespace StarWars
         public DateTime Edited { get; set; }
         public string Url { get; set; }
     }
-
+       
 }

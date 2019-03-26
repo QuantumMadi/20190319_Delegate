@@ -5,7 +5,13 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankSystemFirstVar", "Theory_Delegate\BankSystemFirstVar.csproj", "{AC09ADAB-C269-497E-9F38-45528815FEB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars", "StarWars\StarWars.csproj", "{80903A4D-A3D8-4601-8110-42DB6003B269}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.ConsoleAPP", "StarWars\StarWars.ConsoleAPP.csproj", "{80903A4D-A3D8-4601-8110-42DB6003B269}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.Services.Abstract", "StarWars.Services.Abstract\StarWars.Services.Abstract.csproj", "{C30BB649-3977-45DD-BB91-B98AE42FAB0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.Models", "StarWars.Models\StarWars.Models.csproj", "{AED24AB3-D150-4B09-80E0-68E6239D8ED3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.Services", "StarWars.Services\StarWars.Services.csproj", "{2155705E-E1DC-4FCB-B13D-42591D017602}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{80903A4D-A3D8-4601-8110-42DB6003B269}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80903A4D-A3D8-4601-8110-42DB6003B269}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80903A4D-A3D8-4601-8110-42DB6003B269}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C30BB649-3977-45DD-BB91-B98AE42FAB0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C30BB649-3977-45DD-BB91-B98AE42FAB0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C30BB649-3977-45DD-BB91-B98AE42FAB0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C30BB649-3977-45DD-BB91-B98AE42FAB0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AED24AB3-D150-4B09-80E0-68E6239D8ED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AED24AB3-D150-4B09-80E0-68E6239D8ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AED24AB3-D150-4B09-80E0-68E6239D8ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AED24AB3-D150-4B09-80E0-68E6239D8ED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2155705E-E1DC-4FCB-B13D-42591D017602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2155705E-E1DC-4FCB-B13D-42591D017602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2155705E-E1DC-4FCB-B13D-42591D017602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2155705E-E1DC-4FCB-B13D-42591D017602}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

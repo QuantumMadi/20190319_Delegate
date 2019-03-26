@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -8,16 +8,20 @@ using System.Xml.Serialization;
 
 namespace StarWars
 {
-    public class ToXMLfile
+    public class XMLfile
     {
         private XmlDocument xmlDocument = new XmlDocument(); 
-
-        public ToXMLfile(Person person)
+        public void AddToXml(Person person)
         {         
            using (var fileStream = File.Open("Persons.xml", FileMode.OpenOrCreate))
             {
                 xmlDocument.
             }
         }
+        public Person FromXml()
+        {
+
+        }
     }
 }
+*/

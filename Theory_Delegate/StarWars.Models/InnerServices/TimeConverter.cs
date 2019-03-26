@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json.Converters;
 
-namespace StarWars
+namespace StarWars.Models.InnerServices
 {
-    internal class CustomDateTimeConverter : IsoDateTimeConverter
+    public class CustomDateTimeConverter : IsoDateTimeConverter
     {
         public CustomDateTimeConverter()
         {

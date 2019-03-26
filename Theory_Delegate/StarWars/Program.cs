@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using Newtonsoft.Json;
-using System.Threading.Tasks;
-using System.IO;
-using System.Xml;
+using StarWars.Services;
+using StarWars.Services.Abstract;
+using StarWars.Models;
 
 namespace StarWars
 {
@@ -14,35 +9,22 @@ namespace StarWars
     {
         static void Main(string[] args)
         {
-            Person one = GetPerson(90);
+            Console.WriteLine("Insert index of request person");
+            if (!int.TryParse(Console.ReadLine(), out int index)) { Console.WriteLine("You inserted invalid index!"); };
 
-            if (one == null)
+            IDownloader<Person> downloader = new PersonDownloader();
+            var personRepository = new PersonRepository();
+
+            var person = personRepository.GetT(index);
+            if (person == null)
             {
-                Console.WriteLine("Error 404");
+                person = downloader.DownloadRawJsonData("https://swapi.co/api/people", index);
+                if(person!=null)personRepository.Add(person);
             }
-           // ToXMLfile toXMLfile = new ToXMLfile(one);
-            
+
+            if(person!=null) Console.WriteLine($"{person.Name}\n{person.Hair_color}");
+            else { Console.WriteLine("ERROR: 404"); }
             Console.ReadLine();
-        }
-
-
-
-        public static Person GetPerson (int personId)
-        {
-            string link = "https://swapi.co/api/people/"+personId;
-            WebClient webClient = new WebClient();
-            Person personRequest;
-            string jsonFile;
-            try {
-                jsonFile = webClient.DownloadString(link);
-                personRequest = JsonConvert.DeserializeObject<Person>(jsonFile);
-                return personRequest;
-            }
-            catch
-            {
-                personRequest = null;
-            }
-            return personRequest;        
-        }
+        }   
     }
 }
