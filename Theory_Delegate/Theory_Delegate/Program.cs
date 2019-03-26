@@ -26,6 +26,27 @@ namespace Theory_Delegate
                  * какое-то тело
                  */
                 return; };
+            //lamda expression
+            account.ReportEvent += (text) => Console.WriteLine(text);
+
+            var data = new List<string>
+            {
+                "Almaty",
+                "Karaganda",
+                "Nur-Sultan"
+            };
+
+            //withut lambda and syntaxSugar
+            var bufferList = new List<string>();
+            foreach(var cityName in data)
+            {
+                if (cityName.ToLower().Contains("t"))
+                {
+                    bufferList.Add(cityName);
+                }
+            }
+            //lambda 
+            var result = data.Where(cityName => cityName.ToLower().Contains("t"));
 
             account.AddSum(1000);
             account.WithdrowSum(100);
