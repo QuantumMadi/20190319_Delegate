@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankSystemFirstVar", "Theory_Delegate\BankSystemFirstVar.csproj", "{AC09ADAB-C269-497E-9F38-45528815FEB2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.ConsoleAPP", "StarWars\StarWars.ConsoleAPP.csproj", "{80903A4D-A3D8-4601-8110-42DB6003B269}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.ConsoleApp", "StarWars\StarWars.ConsoleApp.csproj", "{80903A4D-A3D8-4601-8110-42DB6003B269}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.Services.Abstract", "StarWars.Services.Abstract\StarWars.Services.Abstract.csproj", "{C30BB649-3977-45DD-BB91-B98AE42FAB0E}"
 EndProject
@@ -19,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AC09ADAB-C269-497E-9F38-45528815FEB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC09ADAB-C269-497E-9F38-45528815FEB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC09ADAB-C269-497E-9F38-45528815FEB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC09ADAB-C269-497E-9F38-45528815FEB2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{80903A4D-A3D8-4601-8110-42DB6003B269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{80903A4D-A3D8-4601-8110-42DB6003B269}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80903A4D-A3D8-4601-8110-42DB6003B269}.Release|Any CPU.ActiveCfg = Release|Any CPU
